@@ -7,8 +7,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Login from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import LoginPage from './pages/LoginPage';
+import CartPage from './pages/CartPage'
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login></Login>,
+    element: <LoginPage></LoginPage>,
   },
   {
     path: "/signup",
     element: <SignupPage></SignupPage>,
   },
+  {
+    path: "/cart",
+    element:<CartPage></CartPage>
+  }
 ]);
 
 function App() {
